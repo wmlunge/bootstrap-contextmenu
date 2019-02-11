@@ -1,7 +1,7 @@
 /*!
  * Bootstrap Context Menu
- * Author: @sydcanem
- * https://github.com/sydcanem/bootstrap-contextmenu
+ * Author: @wmlunge
+ * https://github.com/wmlunge/bootstrap-contextmenu
  *
  * Inspired by Bootstrap's dropdown plugin.
  * Bootstrap (http://getbootstrap.com).
@@ -27,7 +27,11 @@
 		if (options.target) {
 			this.$element.data('target', options.target);
 		}
-
+		//自动添加data-target属性
+		if (!this.$element && options.target)
+		{
+		    this.$element.attr('data-target', options.target);
+		}
 		this.listen();
 	};
 
