@@ -28,7 +28,7 @@
 			this.$element.data('target', options.target);
 		}
 		//自动添加data-target属性
-		if (!this.$element && options.target)
+		if (this.$element && options.target)
 		{
 		    this.$element.attr('data-target', options.target);
 		}
